@@ -1,5 +1,5 @@
 export const getNextStep = (grid: number[][]): Promise<number[][]> =>
-  fetch("http://localhost:5000/game/next-step", {
+  fetch(`${process.env.REACT_APP_API_URL}/game/next-step`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
